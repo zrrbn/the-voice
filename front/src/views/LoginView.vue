@@ -73,8 +73,9 @@ export default {
             })
                 .then((res) => {
                     this.loading = false
-                    this.username = res.data
-                    this.$router.push({ name: 'performances', params: { userid: this.username._id } }
+                    console.log(res.data)
+                    let userid = res.data._id
+                    this.$router.push({ name: 'performances', params: { id: userid } }
                     )
                 },
                     () => {

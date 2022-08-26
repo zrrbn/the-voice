@@ -34,7 +34,9 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/performances/:id',
-    component: PerformancesView
+    name: 'performances',
+    component: PerformancesView,
+    props: true
   },
   {
     path: '/members/:id',
